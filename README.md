@@ -16,6 +16,7 @@ Link the files to your home directory using GNU Stow:
 ```sh
 stow bash
 stow nvim
+stow tmux
 ```
 
 or run `./install.sh` that does this for you.
@@ -25,6 +26,8 @@ or run `./install.sh` that does this for you.
 - `.bashrc`
 - `.config/nvim`
     >neovim configuration based on NvChad and some additional plugins
+- `.config/tmux`
+    >configuration in `tmux.conf`, plugins managed by `tpm`
 
 
 ## Notes
