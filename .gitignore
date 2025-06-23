@@ -1,0 +1,2 @@
+# Ignore tmux plugin repos
+tmux/.config/tmux/plugins
