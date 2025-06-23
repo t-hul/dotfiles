@@ -18,6 +18,8 @@ stow bash
 stow nvim
 ```
 
+or run `./install.sh` that does this for you.
+
 ## Contents
 
 - `.bashrc`
