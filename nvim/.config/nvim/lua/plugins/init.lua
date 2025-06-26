@@ -29,6 +29,18 @@ return {
 		end,
 	},
 
+	-- Overwrite default NvChad extension_list to add "nerdy" extension
+	{
+		"nvim-telescope/telescope.nvim",
+		opts = {
+			extension_list = { "themes", "terms", "nerdy" },
+		},
+		keys = {
+			{ "<leader>fn", "<cmd>Telescope nerdy<cr>", desc = "Browse nerd icons" },
+			{ "<leader>fr", "<cmd>Telescope nerdy_recent<cr>", desc = "Browse recent nerd icons" },
+		},
+	},
+
 	{
 		"christoomey/vim-tmux-navigator",
 		lazy = false,
@@ -116,6 +128,14 @@ return {
 				ensure_installed = { "codelldb", "cppdbg" }, -- Add required debuggers
 			})
 		end,
+	},
+
+	{
+		"2kabhishek/nerdy.nvim",
+		dependencies = {
+			"folke/snacks.nvim",
+		},
+		cmd = "Nerdy",
 	},
 
 	--  {"nvim-telescope/telescope-symbols.nvim"}
