@@ -63,17 +63,32 @@ return {
 
 	-- markdown preview
 	-- install without yarn or npm
+	-- {
+	-- 	"iamcco/markdown-preview.nvim",
+	-- 	cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+	-- 	lazy = true,
+	-- 	ft = { "markdown" },
+	-- 	build = function()
+	-- 		vim.fn["mkdp#util#install"]()
+	-- 	end,
+	-- 	init = function()
+	-- 		vim.g.mkdp_theme = "dark"
+	-- 	end,
+	-- 	keys = {
+	-- 		{ "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>", desc = "MarkdownPreviewToggle" },
+	-- 	},
+	-- },
+
+	-- alternative to markdown preview: vivify
+	-- needs vivify to be installed
 	{
-		"iamcco/markdown-preview.nvim",
-		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		"jannis-baum/vivify.vim",
+		cmd = { "Vivify" },
 		lazy = true,
 		ft = { "markdown" },
-		build = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-		init = function()
-			vim.g.mkdp_theme = "dark"
-		end,
+		keys = {
+			{ "<leader>mv", "<cmd>Vivify<cr>", desc = "Vivify Markdown" },
+		},
 	},
 
 	-- lazygit integration
@@ -94,7 +109,7 @@ return {
 		-- setting the keybinding for LazyGit with 'keys' is recommended in
 		-- order to load the plugin when the command is run for the first time
 		keys = {
-			{ "<leader>lg", "<cmd>LazyGit<cr><cr>", desc = "LazyGit" },
+			{ "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
 		},
 	},
 
@@ -136,6 +151,14 @@ return {
 			"folke/snacks.nvim",
 		},
 		cmd = "Nerdy",
+	},
+
+	-- Lazy/NvChad example
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {},
+		event = "VeryLazy",
 	},
 
 	--  {"nvim-telescope/telescope-symbols.nvim"}
