@@ -24,6 +24,7 @@ alias zotero=/scratch_ssd/ssd_sdb/Software/Zotero_linux-x86_64/zotero
 alias texstudio=/scratch_ssd/ssd_sdb/Software/texstudio-4.0.1-x86_64.AppImage
 # alias cryptomator=/scratch_ssd/ssd_sdb/Software/cryptomator-1.15.1-x86_64.AppImage
 alias vi=nvim
+alias tw=timew
 
 #set PATH for star-ccm
 #export PATH=${PATH}:/scratch_ssd/StarCCM/15.04.010-R8/STAR-CCM+15.04.010-R8/star/bin
@@ -56,6 +57,10 @@ export PATH=~/code/Python/pythonplotutilities/bin:$PATH
 export PATH=/scratch_ssd/ssd_sdb/Software/bin:$PATH
 #export LD_LIBRARY_PATH=/scratch_ssd/ssd_sdb/Software/lib/:/scratch_ssd/ssd_sdb/Software/lib64/:$LD_LIBRARY_PATH
 #alias gcc_exec='export GCC_EXEC_PREFIX=/scratch_ssd/ssd_sdb/Software/usr/local/lib/gcc/'
+
+# Java 21
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-21.0.8.0.9-1.el9.x86_64/
+export PATH=$JAVA_HOME/bin:$PATH
 
 #OpenFOAM 6 
 #alias of6='source $HOME/OpenFOAM/OpenFOAM-6/etc/bashrc WM_LABEL_SIZE=64 WM_MPLIB=OPENMPI FOAMY_HEX_MESH=yes'
