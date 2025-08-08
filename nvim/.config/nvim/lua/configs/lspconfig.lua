@@ -5,7 +5,7 @@ local lspconfig = require("lspconfig")
 local util = require("lspconfig/util")
 
 -- EXAMPLE
-local servers = { "html", "pylsp", "marksman", "clangd", "texlab" }
+local servers = { "html", "pylsp", "marksman", "clangd", "texlab" } -- , "jdtls"
 local nvlsp = require("nvchad.configs.lspconfig")
 
 -- lsps with default config
