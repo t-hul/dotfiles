@@ -9,6 +9,7 @@ return {
 			"markdown_inline",
 			"lua",
 			"yaml",
+			"java",
 		})
 	end,
 }
