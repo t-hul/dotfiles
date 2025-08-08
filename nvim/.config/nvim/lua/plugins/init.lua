@@ -113,37 +113,37 @@ return {
 		},
 	},
 
-	{
-		"mfussenegger/nvim-dap",
-		dependencies = {
-			"rcarriga/nvim-dap-ui", -- UI for debugging
-			"theHamsta/nvim-dap-virtual-text", -- Virtual text support
-			"jay-babu/mason-nvim-dap.nvim", -- Mason integration for DAP
-		},
-		config = function()
-			local dap = require("dap")
-			local dapui = require("dapui")
-
-			-- Automatically open/close dap-ui on debugging
-			dap.listeners.after.event_initialized["dapui_config"] = function()
-				dapui.open()
-			end
-			dap.listeners.before.event_terminated["dapui_config"] = function()
-				dapui.close()
-			end
-			dap.listeners.before.event_exited["dapui_config"] = function()
-				dapui.close()
-			end
-
-			-- Setup dap-ui
-			require("dapui").setup()
-
-			-- Install DAP servers via Mason
-			require("mason-nvim-dap").setup({
-				ensure_installed = { "codelldb", "cppdbg" }, -- Add required debuggers
-			})
-		end,
-	},
+	-- {
+	-- 	"mfussenegger/nvim-dap",
+	-- 	dependencies = {
+	-- 		"rcarriga/nvim-dap-ui", -- UI for debugging
+	-- 		"theHamsta/nvim-dap-virtual-text", -- Virtual text support
+	-- 		"jay-babu/mason-nvim-dap.nvim", -- Mason integration for DAP
+	-- 	},
+	-- 	config = function()
+	-- 		local dap = require("dap")
+	-- 		local dapui = require("dapui")
+	--
+	-- 		-- Automatically open/close dap-ui on debugging
+	-- 		dap.listeners.after.event_initialized["dapui_config"] = function()
+	-- 			dapui.open()
+	-- 		end
+	-- 		dap.listeners.before.event_terminated["dapui_config"] = function()
+	-- 			dapui.close()
+	-- 		end
+	-- 		dap.listeners.before.event_exited["dapui_config"] = function()
+	-- 			dapui.close()
+	-- 		end
+	--
+	-- 		-- Setup dap-ui
+	-- 		require("dapui").setup()
+	--
+	-- 		-- Install DAP servers via Mason
+	-- 		require("mason-nvim-dap").setup({
+	-- 			ensure_installed = { "codelldb", "cppdbg" }, -- Add required debuggers
+	-- 		})
+	-- 	end,
+	-- },
 
 	{
 		"2kabhishek/nerdy.nvim",
@@ -159,6 +159,12 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {},
 		event = "VeryLazy",
+	},
+
+	-- JDTLS
+	{
+		"mfussenegger/nvim-jdtls",
+		ft = { "java" }, -- optional, loads only on Java files
 	},
 
 	--  {"nvim-telescope/telescope-symbols.nvim"}
