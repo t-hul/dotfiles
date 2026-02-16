@@ -21,6 +21,7 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; histor
 
 # User specific aliases and functions
 alias zotero=/scratch_ssd/ssd_sdb/Software/Zotero_linux-x86_64/zotero
+alias vial=/scratch_ssd/ssd_sdb/Software/Vial-v0.7.5-x86_64.AppImage
 alias texstudio=/scratch_ssd/ssd_sdb/Software/texstudio-4.0.1-x86_64.AppImage
 # alias cryptomator=/scratch_ssd/ssd_sdb/Software/cryptomator-1.15.1-x86_64.AppImage
 alias vi=nvim
@@ -29,6 +30,10 @@ alias tw=timew
 #set PATH for star-ccm
 #export PATH=${PATH}:/scratch_ssd/StarCCM/15.04.010-R8/STAR-CCM+15.04.010-R8/star/bin
 source ~/.flexlmrc
+
+# bash completion additions
+source ~/.bash_completion/timew-bashcompletion/timew
+source ~/.bash_completion/_python-argcomplete
 
 # openBLAS Threads
 export OPENBLAS_NUM_THREADS=1
@@ -52,6 +57,7 @@ export PATH=~/code/Semtex/sview:$PATH
 
 # Adding python scripts to path
 export PATH=~/code/Python/pythonplotutilities/bin:$PATH
+export PATH=~/code/Python/semtex-field-utilities/bin:$PATH
 
 # Adding local software to path
 export PATH=/scratch_ssd/ssd_sdb/Software/bin:$PATH
