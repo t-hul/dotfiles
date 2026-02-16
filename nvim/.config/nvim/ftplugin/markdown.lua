@@ -7,7 +7,7 @@ function SaveAndRunMdToPdf()
 
 	vim.cmd("write")
 
-	vim.fn.system("md-to-pdf " .. current_file)
+	vim.fn.system("md-to-pdf --stylesheet ~/dotfiles/markdown.css " .. current_file)
 
 	print("Created pdf from " .. current_file .. " (by md-to-pdf)")
 end
@@ -21,3 +21,14 @@ wk.add({
 		buffer = 0, -- current buffer only
 	},
 })
+
+-- Only for markdown buffers
+local abbrs = {
+	["->"] = "󰁔",
+	["=>"] = "󰜴",
+}
+
+for lhs, rhs in pairs(abbrs) do
+	-- iabbrev <buffer> lhs rhs
+	vim.cmd(("iabbrev <buffer> %s %s"):format(lhs, rhs))
+end
