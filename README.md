@@ -3,6 +3,18 @@
 These are my configuration files I use on my main Linux machine.
 It is running Rocky Linux 9.
 
+## Prerequisits
+
+### WSL (Ubuntu 22.04. LTS)
+Packages needed for the neovim setup
+
+```sh
+sudo apt install stow
+sudo apt install unzip
+sudo apt install python3.12-venv
+sudo apt install npm
+```
+
 ## Usage
 
 Clone the repository:
