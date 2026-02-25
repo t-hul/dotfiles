@@ -103,3 +103,6 @@ export PYTHONPATH=/scratch_ssd/ssd_sdb/Software/pip/lib/python3.6/site-packages:
 #unset __conda_setup
 # <<< conda initialize <<<
 
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
