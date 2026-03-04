@@ -13,6 +13,16 @@ sudo apt install stow
 sudo apt install unzip
 sudo apt install python3.12-venv
 sudo apt install npm
+sudo npm install tree-sitter-cli
+```
+
+Requirements for clipboard usage
+```sh
+sudo apt install wl-clipboard
+curl -sLo /tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/latest/download/win32yank-x64.zip
+unzip /tmp/win32yank.zip -d /tmp
+sudo mv /tmp/win32yank.exe /usr/local/bin/
+sudo chmod +x /usr/local/bin/win32yank.exe
 ```
 
 ## Usage
